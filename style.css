@@ -13,15 +13,21 @@ main{
     width: 40%;
 }
 
+/* player section */
 .player{
     width: 60%;
 }
+
+/* rock paper scissors */
 .rps-choises{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 50px;
 }
 #random{
     grid-column: span 3;
+    height: 50px;
+    border-radius: 16px;
 }
 .rps-logo img{
     width: 200px;
@@ -30,8 +36,34 @@ main{
     display: flex;
     justify-content: center; 
     align-items: center; 
-    border: 1px solid black;
+    border: 6px solid black;
     width: 300px;
     height: 300px;
     border-radius: 50%; 
+    margin-bottom: 25px;
+}
+
+/* bet amounts */
+.bet-amounts{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.bet{
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* informations */
+.informations{
+    display: flex;
+    justify-content: space-around;
+}
+.frame{
+    border: 1px solid black;
 }
