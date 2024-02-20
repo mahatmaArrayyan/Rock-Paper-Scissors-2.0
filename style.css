@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+}
+
+.wheel{
+    width: 40%;
+}
+
+.player{
+    width: 60%;
+}
+.rps-choises{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+#random{
+    grid-column: span 3;
+}
+.rps-logo img{
+    width: 200px;
+}
+.rps {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; 
+}
