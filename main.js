@@ -13,6 +13,15 @@ function shuffle(array){
     }
 }
 
+const bet = [1000, 5000, 25000, 50000, 100000, 500000]
+
+let botChose = Math.random();
+
+function choseRock(){
+    if ( botChose < 0.4)
+    spin();
+}
+
 function spin(){
     wheel.play();
     const box = document.getElementById("box");

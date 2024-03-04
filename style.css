@@ -170,3 +170,21 @@ span{
         right: -50px;
     }
 }
+
+/* choices */
+.choices{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-radius: 16px;
+    background-color: red;
+}
+.choices img{
+    width: 140px;
+}
+.choices button{
+    background: none;
+    appearance: none;
+    border: none;
+}
