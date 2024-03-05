@@ -43,8 +43,8 @@ function spin(){
     PS[0],
     Headset[0],
     Drone[0],
-    ROG[0],
-    ])
+    ROG[0]
+    ]);
     
     if (AC.includes (results[0]))       SelectedItem = "Air Conditioner"; 
     if (Camera.includes (results[0]))   SelectedItem = "Camera Sport Action";
@@ -54,18 +54,19 @@ function spin(){
     if (Drone.includes (results[0]))    SelectedItem = "Drone Mini"; 
     if (ROG.includes (results[0]))      SelectedItem = "Laptop Asus ROG";
 
-    box.style.setProperty("transition", "all ease 5s"); box.style.transform = "rotate(" + results[0] + "deg)"; 
+    box.style.setProperty("transition", "all ease 9s"); 
+    box.style.transform = "rotate(" + results[0] + "deg)"; 
     element.classList.remove("animate");
     setTimeout(function(){
         element.classList.add("animate");
-    }, 5000);
+    }, 9000);
 
     setTimeout(function(){
         // alert
-    })
+    });
 
     setTimeout(function(){
         box.style.setProperty("transition", "initial");
         box.style.transform = "rotate(90deg)";
-    }, 6000)
+    }, 6000);
 }
