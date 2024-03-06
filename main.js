@@ -1,17 +1,21 @@
-function shuffle(array){
-    var currnetIndex = array.length, 
-    randomIndex;
+function shuffle(array) {
+    let currentIndex = array.length,
+        randomIndex;
 
-    while(0 !== currnetIndex){
-        randomIndex = Math.floor(Math.random() * currnetIndex);
-        currnetIndex--;
-        [array[currnetIndex], array[randomIndex]] = [
-            array[currnetIndex],
-            array[currnetIndex],
+    while (0 !== currentIndex) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // Swap elements
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex],
+            array[currentIndex],
         ];
-        return array;
     }
+
+    return array;
 }
+
 
 const bet = [1000, 5000, 25000, 50000, 100000, 500000]
 
@@ -25,7 +29,7 @@ function choseRock(){
 function spin(){
     wheel.play();
     const box = document.getElementById("box");
-    const element = document.getElementsByTagName("main");
+    const element = document.getElementById("mainBox");
     let SelectedItem = "";
     
     let AC = shuffle([1890, 2250, 2610]);
@@ -37,29 +41,41 @@ function spin(){
     let ROG  = shuffle ([1570, 1930, 2290]);
     
     let results = shuffle([
-    AC[0], 
-    Camera[0],
-    Zonk[0],
-    PS[0],
-    Headset[0],
-    Drone[0],
-    ROG[0]
+        AC[0], 
+        Camera[0],
+        Zonk[0],
+        PS[0],
+        Headset[0],
+        Drone[0],
+        ROG[0],
     ]);
+    console.log("AC:", AC);
+    console.log("results:", results[0]);
     
-    if (AC.includes (results[0]))       SelectedItem = "Air Conditioner"; 
-    if (Camera.includes (results[0]))   SelectedItem = "Camera Sport Action";
-    if (Zonk.includes (results[0]))     SelectedItem = "";
-    if (PS.includes (results[0]))       SelectedItem = "Playsation 4 Slim"; 
-    if (Headset.includes (results[0]))  SelectedItem = "Headset Gaming"; 
-    if (Drone.includes (results[0]))    SelectedItem = "Drone Mini"; 
-    if (ROG.includes (results[0]))      SelectedItem = "Laptop Asus ROG";
+    if (AC.includes(results[0])) {
+        SelectedItem = "Air Conditioner";
+    } else if (Camera.includes(results[0])) {
+        SelectedItem = "Camera Sport Action";
+    } else if (Zonk.includes(results[0])) {
+        SelectedItem = "";
+    } else if (PS.includes(results[0])) {
+        SelectedItem = "Playsation 4 Slim";
+    } else if (Headset.includes(results[0])) {
+        SelectedItem = "Headset Gaming";
+    } else if (Drone.includes(results[0])) {
+        SelectedItem = "Drone Mini";
+    } else if (ROG.includes(results[0])) {
+        SelectedItem = "Laptop Asus ROG";
+    }
+    
 
-    box.style.setProperty("transition", "all ease 9s"); 
+    box.style.setProperty("transition", "all ease 5s"); 
     box.style.transform = "rotate(" + results[0] + "deg)"; 
     element.classList.remove("animate");
+
     setTimeout(function(){
         element.classList.add("animate");
-    }, 9000);
+    }, 5000);
 
     setTimeout(function(){
         // alert

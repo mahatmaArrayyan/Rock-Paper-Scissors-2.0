@@ -8,7 +8,7 @@
 </head>
 <body>
     <main>
-        <div class="spin">
+        <div class="mainbox" id="mainbox">
             <div class="box" id="box">
                 <div class="box1">
                     <span class="font span1"><h5>high</h5></span>
@@ -25,11 +25,16 @@
                     <span class="font span5"><h5>lower</h5></span>
                 </div>
             </div>
-            <div class="bot-choices"><img src="assets/imgs/paper.png" alt=""></div>
+            <button onclick="spin()" class="bot-choices"><img src="assets/imgs/paper.png" alt=""></button>
         </div>
     
         <div class="bets">
-    
+            <img src="assets/imgs/chip.png" alt="bet 1k">
+            <!-- <img src="assets/imgs/chip.png" alt="bet 5k">
+            <img src="assets/imgs/chip.png" alt="bet 25k">
+            <img src="assets/imgs/chip.png" alt="bet 50k">
+            <img src="assets/imgs/chip.png" alt="bet 100k">
+            <img src="assets/imgs/chip.png" alt="bet 500k"> -->
         </div>
     
         <div class="choices">
@@ -43,10 +48,21 @@
                 <img src="assets/imgs/scissors.png" alt="scissors">
             </button>
         </div>
+
+        <!-- kenapa di gunakan kabel  -->
     
         <div class="money">
-            <div class="balance">
-                
+            <div id="balance" class="info">
+                <h3>Balance</h3>
+                <input type="text">
+            </div>
+            <div id="win" class="info">
+                <h3>Win</h3>
+                <input type="text">
+            </div>
+            <div id="bet" class="info">
+                <h3>Bet</h3>
+                <input type="text">
             </div>
         </div>
         <audio 

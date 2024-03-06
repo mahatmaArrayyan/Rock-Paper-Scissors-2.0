@@ -7,16 +7,24 @@
 body{
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 100vh;
+    background-color: navy;
 }
-.spin{
+main{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.mainbox{
     position: relative;
     margin-top: 20px;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     overflow: hidden;
 }
-.spin::after{
+.mainbox::after{
     position: absolute;
     content: "";
     width: 100%;
@@ -153,14 +161,14 @@ span{
 }
 .bot-choices{
     position: absolute;
-    top: 30%;
+    top: 34%;
     left: 30%;
     color: white;
     z-index: 999;
 }
 .bot-choices img{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
 }
 .mainbox.animate::after{
     animation: animationArrow 0.7s ease infinite;
@@ -169,6 +177,20 @@ span{
     50%{
         right: -50px;
     }
+}
+/* bets */
+.bets{
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+}
+.bets img{
+    width: 100px;
+}
+#wheel{
+    display: none;
 }
 
 /* choices */
@@ -179,12 +201,39 @@ span{
     padding: 15px 0;
     border-radius: 16px;
     background-color: red;
+    width: 400px;
 }
 .choices img{
-    width: 140px;
+    width: 100px;
 }
 .choices button{
     background: none;
     appearance: none;
     border: none;
 }
+
+/* money */
+.money{
+    display: flex;
+    background-color: yellow;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    border-radius: 16px;
+    height: 100px;
+}
+.info{
+    background-color: red;
+    width: 110px;
+    height: 80px;
+    text-align: center;
+    color: white;
+    border-radius: 16px;
+    padding: 5px;
+}
+.info input{
+    background: none;
+    /* border: none; */
+    width: 100px;
+}
+
