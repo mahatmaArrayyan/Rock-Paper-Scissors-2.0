@@ -49,8 +49,6 @@ function spin(){
         Drone[0],
         ROG[0],
     ]);
-    console.log("AC:", AC);
-    console.log("results:", results[0]);
     
     if (AC.includes(results[0])) {
         SelectedItem = "Air Conditioner";
@@ -69,20 +67,27 @@ function spin(){
     }
     
 
-    box.style.setProperty("transition", "all ease 5s"); 
+    box.style.setProperty("transition", "all ease 9s"); 
     box.style.transform = "rotate(" + results[0] + "deg)"; 
     element.classList.remove("animate");
 
     setTimeout(function(){
         element.classList.add("animate");
-    }, 5000);
+    }, 9000);
 
     setTimeout(function(){
-        // alert
-    });
+        Swal.fire({
+            title: "Sweet!",
+            text: "Modal with a custom image.",
+            imageUrl: "https://unsplash.it/400/200",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "Custom image"
+          });
+    }, 9500);
 
     setTimeout(function(){
         box.style.setProperty("transition", "initial");
         box.style.transform = "rotate(90deg)";
-    }, 6000);
+    }, 10000);
 }
