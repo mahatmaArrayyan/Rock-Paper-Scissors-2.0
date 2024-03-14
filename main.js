@@ -32,38 +32,58 @@ function spin(){
     const element = document.getElementById("mainBox");
     let SelectedItem = "";
     
-    let AC = shuffle([1890, 2250, 2610]);
-    let Camera = shuffle ([1850, 2210, 2570]); 
-    let Zonk = shuffle([1770, 2130, 2490]); 
-    let PS = shuffle([1810, 2170, 2530]); 
-    let Headset = shuffle ([1750, 2110, 2470]); 
-    let Drone = shuffle([1630, 1990, 2350]); 
-    let ROG  = shuffle ([1570, 1930, 2290]);
+    // [3000, 3665, 2955]
+    // [2225, 2900, 2570]
+    // [2145, 2820, 2490]
+    // [2185, 2860, 2530]
+    // [2125, 2800, 2470]
+    // [2005, 2680, 2350]
+    // [1945, 2620, 2290]
     
+    let lR1 = shuffle([1850, 2210, 2570]); 
+    let lR2 = shuffle([1770, 2130, 2490]); 
+    let lR3 = shuffle([1810, 2170, 2530]); 
+    let lR4 = shuffle([1750, 2110, 2470]); 
+    let lW1 = shuffle([1630, 1990, 2350]); 
+    let lW2 = shuffle([1570, 1930, 2290]);
+    let lW3 = shuffle([1570, 1930, 2290]);
+    let mD1 = shuffle([1570, 1930, 2290]);
+    let hG1 = shuffle([1570, 1930, 2290]);
+    let mL1 = shuffle([2625, 2975, 2955]);
+
     let results = shuffle([
-        AC[0], 
-        Camera[0],
-        Zonk[0],
-        PS[0],
-        Headset[0],
-        Drone[0],
-        ROG[0],
+        lR1[0], 
+        lR2[0], 
+        lR3[0], 
+        lR4[0], 
+        lW1[0], 
+        lW2[0], 
+        lW3[0], 
+        mD1[0], 
+        hG1[0], 
+        mL1[0],
     ]);
     
-    if (AC.includes(results[0])) {
-        SelectedItem = "Air Conditioner";
-    } else if (Camera.includes(results[0])) {
-        SelectedItem = "Camera Sport Action";
-    } else if (Zonk.includes(results[0])) {
-        SelectedItem = "";
-    } else if (PS.includes(results[0])) {
-        SelectedItem = "Playsation 4 Slim";
-    } else if (Headset.includes(results[0])) {
-        SelectedItem = "Headset Gaming";
-    } else if (Drone.includes(results[0])) {
-        SelectedItem = "Drone Mini";
-    } else if (ROG.includes(results[0])) {
-        SelectedItem = "Laptop Asus ROG";
+    if (lR1.includes(results[0])) {
+        SelectedItem = "Lower";
+    } else if (lR2.includes(results[0])) {
+        SelectedItem = "Lower";
+    } else if (lR3.includes(results[0])) {
+        SelectedItem = "Lower";
+    } else if (lR4.includes(results[0])) {
+        SelectedItem = "Lower";
+    } else if (lW1.includes(results[0])) {
+        SelectedItem = "Low";
+    } else if (lW2.includes(results[0])) {
+        SelectedItem = "Low";
+    } else if (lW3.includes(results[0])) {
+        SelectedItem = "Low";
+    } else if (mD1.includes(results[0])) {
+        SelectedItem = "Mid";
+    } else if (hG1.includes(results[0])) {
+        SelectedItem = "High";
+    } else if (mL1.includes(results[0])) {
+        SelectedItem = "Mega Lucky";
     }
     
 
